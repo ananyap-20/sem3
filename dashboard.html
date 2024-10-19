@@ -840,13 +840,16 @@
                                     <div class="site-header-primary-section-right-center site-header-section ast-flex ast-grid-right-center-section">
                                         </div>
                         <div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
-        <div class="ast-builder-button-wrap ast-builder-button-size-"><a class="ast-custom-button-link" href="/contact/" target="_self"><div class="ast-custom-button">Get Started</div></a><a class="menu-link" href="/contact/" target="_self">Get Started</a></div>		</div>
-                    </div>
+                          <div class="ast-builder-button-wrap ast-builder-button-size-">
+                            <!-- Removed the first button -->
+                            <!-- <a class="ast-custom-button-link" href="/contact/" target="_self">
+                              <div class="ast-custom-button">Get Started</div>
+                            </a> -->
+                            
+                            <!-- Removed the second button (the "menu-link") -->
+                            <!-- <a class="menu-link" href="/contact/" target="_self">Get Started</a> -->
                           </div>
-            </div>
-                  </div>
-        </div>
-    </div> <!-- Main Header Bar Wrap -->
+                           <!-- Main Header Bar Wrap -->
   <div id="ast-mobile-header" class="ast-mobile-header-wrap " data-type="dropdown">
       <div class="ast-main-header-wrap main-header-bar-wrap">
       <div class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap site-header-focus-item ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default" data-section="section-primary-header-builder">
@@ -907,9 +910,32 @@
   
     
     
-  <div class="wp-block-uagb-container uagb-block-c832201d alignfull uagb-is-root-container">
-  <div class="wp-block-uagb-container uagb-block-64e228b6 alignfull uagb-is-root-container"><div class="uagb-container-inner-blocks-wrap">
-  <div class="wp-block-uagb-info-box uagb-block-22704a2c uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top"><div class="uagb-ifb-content"><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">Your College Marketplace</span><h1 class="uagb-ifb-title">Buy, Sell, and Share College Supplies</h1></div><p class="uagb-ifb-desc">Join Ballyhoo to easily exchange college supplies and notes, making student life more manageable and affordable.</p><div class="uagb-ifb-button-wrapper wp-block-button"><a href="contact/" class="uagb-infobox-cta-link wp-block-button__link" target="_self" rel="noopener noreferrer" onclick="return true;"><span class="uagb-inline-editing">Get Started</span></a></div></div></div>
+    <div class="wp-block-uagb-container uagb-block-c832201d alignfull uagb-is-root-container">
+      <div class="wp-block-uagb-container uagb-block-64e228b6 alignfull uagb-is-root-container">
+        <div class="uagb-container-inner-blocks-wrap">
+          <div class="wp-block-uagb-info-box uagb-block-22704a2c uagb-infobox__content-wrap uagb-infobox-icon-above-title uagb-infobox-image-valign-top">
+            <div class="uagb-ifb-content">
+              <div class="uagb-ifb-title-wrap">
+                <span class="uagb-ifb-title-prefix">Your College Marketplace</span>
+                <h1 class="uagb-ifb-title">Buy, Sell, and Share College Supplies</h1>
+              </div>
+              <p class="uagb-ifb-desc">
+                Join Ballyhoo to easily exchange college supplies and notes, making student life more manageable and affordable.
+              </p>
+              <!-- Remove or comment out this div to remove the button -->
+              <!--
+              <div class="uagb-ifb-button-wrapper wp-block-button">
+                <a href="contact/" class="uagb-infobox-cta-link wp-block-button__link" target="_self" rel="noopener noreferrer" onclick="return true;">
+                  <span class="uagb-inline-editing">Get Started</span>
+                </a>
+              </div>
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   
   
   
@@ -980,33 +1006,51 @@
   <div class="wp-block-uagb-container uagb-block-a31a30fe alignfull uagb-is-root-container"><div class="uagb-container-inner-blocks-wrap">
   <div class="wp-block-uagb-container uagb-block-eca364b1">
   <div class="wp-block-uagb-container uagb-block-d1dd5338">
-  <div class="wp-block-uagb-container uagb-layout-grid uagb-block-586c46e8">
-  <div class="wp-block-uagb-advanced-heading uagb-block-8bca50c3"><h4 class="uagb-heading-text">01</h4></div>
+    <div class="wp-block-uagb-container uagb-layout-grid uagb-block-586c46e8">
+      <div class="wp-block-uagb-advanced-heading uagb-block-8bca50c3">
+        <h4 class="uagb-heading-text">01</h4>
+      </div>
+    
+      <div class="wp-block-uagb-advanced-heading uagb-block-e9723c7e">
+        <a href="#" class="uagb-button uagb-button-primary">
+          Buy College Supplies
+        </a>
+      </div>
+    </div>
+    <style>
+    .uagb-button {
+      padding: 10px 20px;
+      color: black;
+      text-align: center;
+      text-decoration: none !important;
+      border-radius: 5px;
+      display: inline-block;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    
+    .uagb-button:hover {
+      background-color: #ee5959; /* Change on hover */
+      color:white;
+      transition: 0.5s;
+
+    }
+  </style>
   
   
   
-  <div class="wp-block-uagb-advanced-heading uagb-block-e9723c7e"><h3 class="uagb-heading-text">Buy College Supplies</h3></div>
-  </div>
-  
-  
-  
-  <div class="wp-block-uagb-container uagb-layout-grid uagb-block-3689c5db">
-  <div class="wp-block-uagb-advanced-heading uagb-block-7519947d"><h4 class="uagb-heading-text">02</h4></div>
-  
-  
-  
-  <div class="wp-block-uagb-advanced-heading uagb-block-3a3a9da2"><h3 class="uagb-heading-text">Rent Textbooks Easily</h3></div>
-  </div>
-  
-  
-  
-  <div class="wp-block-uagb-container uagb-layout-grid uagb-block-93e24c36">
-  <div class="wp-block-uagb-advanced-heading uagb-block-61f78184"><h4 class="uagb-heading-text">03</h4></div>
-  
-  
-  
-  <div class="wp-block-uagb-advanced-heading uagb-block-ca0ac2e2"><h3 class="uagb-heading-text">Sell Your Supplies</h3></div>
-  </div>
+    <div class="wp-block-uagb-container uagb-layout-grid uagb-block-586c46e8">
+      <div class="wp-block-uagb-advanced-heading uagb-block-8bca50c3">
+        <h4 class="uagb-heading-text">02</h4>
+      </div>
+    
+      <div class="wp-block-uagb-advanced-heading uagb-block-e9723c7e">
+        <a href="#" class="uagb-button uagb-button-primary">
+          Rent College Supplies
+        </a>
+      </div>
+    </div>
+    
   </div>
   
   
@@ -1019,16 +1063,36 @@
   
   
   
-  <div class="wp-block-uagb-container uagb-block-2e06931e alignfull uagb-is-root-container"><div class="uagb-container-inner-blocks-wrap">
-  <div class="wp-block-uagb-container uagb-block-040867ae">
-  <div class="wp-block-uagb-info-box uagb-block-9dc3d377 uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top wp-block-uagb-info-box--has-margin"><div class="uagb-infobox-margin-wrapper"><div class="uagb-ifb-content"><div class="uagb-ifb-title-wrap"><div class="uagb-ifb-separator"></div><h2 class="uagb-ifb-title">Discover how Ballyhoo can enhance your college experience today!</h2></div><div class="uagb-ifb-button-wrapper wp-block-button"><a href="contact/" class="uagb-infobox-cta-link wp-block-button__link" target="_self" rel="noopener noreferrer" onclick="return true;"><span class="uagb-inline-editing">Get Started</span></a></div></div></div></div>
+  <div class="wp-block-uagb-container uagb-block-2e06931e alignfull uagb-is-root-container">
+    <div class="uagb-container-inner-blocks-wrap">
+      <div class="wp-block-uagb-container uagb-block-040867ae">
+        <div class="wp-block-uagb-info-box uagb-block-9dc3d377 uagb-infobox__content-wrap uagb-infobox-icon-above-title uagb-infobox-image-valign-top wp-block-uagb-info-box--has-margin">
+          <div class="uagb-infobox-margin-wrapper">
+            <div class="uagb-ifb-content">
+              <div class="uagb-ifb-title-wrap">
+                <div class="uagb-ifb-separator"></div>
+                <h2 class="uagb-ifb-title">Discover how Ballyhoo can enhance your college experience today!</h2>
+              </div>
+              <!-- Remove or comment out this entire div to remove the button -->
+              <!--
+              <div class="uagb-ifb-button-wrapper wp-block-button">
+                <a href="contact/" class="uagb-infobox-cta-link wp-block-button__link" target="_self" rel="noopener noreferrer" onclick="return true;">
+                  <span class="uagb-inline-editing">Get Started</span>
+                </a>
+              </div>
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  </div></div>
+  
   
   
   
   <div class="wp-block-uagb-container uagb-block-65ca346b alignfull uagb-is-root-container"><div class="uagb-container-inner-blocks-wrap">
-  <div class="wp-block-uagb-advanced-heading uagb-block-2e2f5ae6"><p class="uagb-desc-text">How We Operate</p><h2 class="uagb-heading-text">Simple Steps to Get Started</h2></div>
+
   
   
   

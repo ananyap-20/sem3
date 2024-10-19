@@ -52,7 +52,7 @@ function login(event) {
             if (userData.password === password) {
                 alert("Login successful!");
                 // Navigate to a different page after login
-                window.location.href = "dashboard.html"; // Redirect to dashboard page or any other page
+                window.location.href = "homepage.html"; // Redirect to dashboard page or any other page
             } else {
                 alert("Incorrect password. Please try again.");
             }

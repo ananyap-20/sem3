@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Calculator</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Main Header */
+        header {
+            background-color: #ef5959;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* Calculator Container */
+        .calculator-store {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Calculator Cards */
+        .calculator-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .calculator-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .calculator-card img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .calculator-card h3 {
+            margin: 15px 0;
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        .calculator-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .rent-button {
+            padding: 12px 20px;
+            background-color: #ef5959;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .rent-button:hover {
+            background-color: #cc4e4e;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Rent a Calculator Per Hour</h1>
+        <p>Choose from a variety of calculators for minimal rent!</p>
+    </header>
+
+    <!-- Calculator Store Section -->
+    <div class="calculator-store">
+        <!-- Calculator 1 -->
+        <div class="calculator-card">
+            <img src="https://c8.alamy.com/comp/J4AFRH/boy-learning-mathematical-class-school-J4AFRH.jpg" alt="Scientific Calculator">
+            <h3>Scientific Calculator</h3>
+            <p>Rent for ₹10 per hour</p>
+            <a href="calculator.html" class="rent-button">Rent Now</a>
+        </div>
+
+        <!-- Calculator 2 -->
+        <div class="calculator-card">
+            <img src="https://th.bing.com/th/id/OIP.cA-2LIBD3hsEUbVDhlBQYgHaE8?rs=1&pid=ImgDetMain" alt="Graphing Calculator">
+            <h3>Graphing Calculator</h3>
+            <p>Rent for ₹15 per hour</p>
+            <a href="calculator.html" class="rent-button">Rent Now</a>
+        </div>
+
+        <!-- Calculator 3 -->
+        <div class="calculator-card">
+            <img src="https://th.bing.com/th/id/OIP.YnqqGXf56wLWnYg8EONROwHaHT?rs=1&pid=ImgDetMain" alt="Financial Calculator">
+            <h3>Financial Calculator</h3>
+            <p>Rent for ₹20 per hour</p>
+            <a href="calculator.html" class="rent-button">Rent Now</a>
+        </div>
+
+        <!-- Calculator 4 -->
+        <div class="calculator-card">
+            <img src="https://th.bing.com/th/id/OIP.Dj7LWFw4dur7pAsdOcwI0AHaHa?rs=1&pid=ImgDetMain" alt="Basic Calculator">
+            <h3>Basic Calculator</h3>
+            <p>Rent for ₹5 per hour</p>
+            <a href="calculator.html" class="rent-button">Rent Now</a>
+        </div>
+
+        <!-- Calculator 5 -->
+        <div class="calculator-card">
+            <img src="https://th.bing.com/th/id/OIP.vOAqLuFiOj84Y3zAOSaq3wHaHa?rs=1&pid=ImgDetMain" alt="Advanced Graphing Calculator">
+            <h3>Advanced Graphing Calculator</h3>
+            <p>Rent for ₹20 per hour</p>
+            <a href="calculator.html" class="rent-button">Rent Now</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Rent A Calculator | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+

@@ -68,11 +68,11 @@
         <h1>Welcome</h1>
         <p class="greeting" id="greetingText">Hi, [User Name]!</p>
 
-        <!-- Buy/Rent Button Only -->
+        <!-- Buy/Rent Button -->
         <button id="buyRentButton">Buy / Rent</button>
         
-        <!-- If you want to add Sell/Lend button later, you can uncomment the following line -->
-        <!-- <button id="sellLendButton">Sell / Lend</button> -->
+        <!-- Sell/Lend Button -->
+        <button id="sellLendButton">Sell / Lend</button>
     </div>
 
     <script>
@@ -91,6 +91,12 @@
         document.getElementById('buyRentButton').addEventListener('click', function() {
             // Redirect to homepage.html when "Buy/Rent" is clicked
             window.location.href = 'homepage.html';
+        });
+
+        // Event listener for Sell/Lend button
+        document.getElementById('sellLendButton').addEventListener('click', function() {
+            // Redirect to sell_lend.html (or any page you need for selling or lending)
+            window.location.href = 'sell_lend.html';  // Replace with actual page if you have one
         });
     </script>
 </body>

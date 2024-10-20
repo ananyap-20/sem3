@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login / Sign-Up</title>
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Styles for the login page */
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
@@ -21,69 +15,36 @@
             background: linear-gradient(135deg, #6e7ff3, #ff7e5f);
         }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-
         .form-box {
             background-color: #fff;
-            padding: 40px 60px;
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            width: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .form-box:hover {
-            transform: scale(1.05);
+            width: 300px;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
+            font-size: 1.8rem;
             color: #333;
             margin-bottom: 20px;
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            position: relative;
         }
 
         input {
+            padding: 10px;
+            margin: 10px 0;
             width: 100%;
-            padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
             outline: none;
-            font-size: 1rem;
-            color: #333;
-            transition: all 0.3s ease;
-        }
-
-        input:focus {
-            border-color: #6e7ff3;
-        }
-
-        input::placeholder {
-            color: #888;
-            opacity: 0.8;
         }
 
         button {
-            width: 100%;
-            padding: 15px;
+            padding: 10px 20px;
             background-color: #6e7ff3;
+            color: white;
             border: none;
             border-radius: 5px;
-            color: white;
-            font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -93,173 +54,45 @@
         }
 
         .toggle-link {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1rem;
             color: #6e7ff3;
             cursor: pointer;
-            transition: color 0.3s ease;
+            margin-top: 10px;
         }
 
         .toggle-link:hover {
             color: #5a67d8;
             text-decoration: underline;
         }
-
-        .form-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .form-action {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Success Message */
-        .success-message {
-            display: none;
-            padding: 15px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1rem;
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .form-box {
-            animation: fadeIn 0.5s ease;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .form-box {
-                padding: 40px 30px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .form-box {
-                padding: 40px 20px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-        }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <!-- Login Form -->
-        <div class="form-box" id="loginFormBox">
-            <h1>Login</h1>
-            <form id="loginForm" action="#" method="post">
-                <div class="form-group">
-                    <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit">Login</button>
-            </form>
-            <p class="toggle-link" id="goToSignup">Don't have an account? Sign Up</p>
-        </div>
-
-        <!-- Sign Up Form -->
-        <div class="form-box" id="signupFormBox" style="display: none;">
-            <h1>Sign Up</h1>
-            <form id="signupForm" action="#" method="post">
-                <div class="form-group">
-                    <input type="text" id="signupName" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="signupEmail" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="signupPassword" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit">Sign Up</button>
-            </form>
-            <p class="toggle-link" id="goToLogin">Already have an account? Log In</p>
-        </div>
+    <div class="form-box">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p class="toggle-link" id="goToSignup">Don't have an account? Sign Up</p>
     </div>
 
-    <!-- Success message that will be shown upon successful submission -->
-    <div class="success-message" id="successMessage">Your account has been successfully created. You can now log in!</div>
-
     <script>
-    // Get the form elements
-    const loginFormBox = document.getElementById('loginFormBox');
-    const signupFormBox = document.getElementById('signupFormBox');
-    const goToSignup = document.getElementById('goToSignup');
-    const goToLogin = document.getElementById('goToLogin');
-    const successMessage = document.getElementById('successMessage');
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    // Switch to Sign Up form
-    goToSignup.addEventListener('click', function () {
-        loginFormBox.style.display = 'none';
-        signupFormBox.style.display = 'block';
-    });
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
 
-    // Switch to Login form
-    goToLogin.addEventListener('click', function () {
-        signupFormBox.style.display = 'none';
-        loginFormBox.style.display = 'block';
-    });
+            // Normally, you'd verify credentials with a server
+            // Here, we'll assume success and extract the username
+            const userName = email.split('@')[0];  // Extract username from email (e.g., test@gmail.com -> test)
 
-    // Dummy form submission handling (replace with actual logic)
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const email = document.getElementById('loginEmail').value;
-        const password = document.getElementById('loginPassword').value;
+            localStorage.setItem('userName', userName);  // Store username in localStorage
 
-        // Normally, here you'd send the data to the server via an API or AJAX
-        // If login is successful, redirect to homepage.html
-        successMessage.textContent = 'Login successful for ' + email;
-        successMessage.style.display = 'block';
-        setTimeout(function () {
-            successMessage.style.display = 'none';
-            window.location.href = "homepage.html";  // Redirect to homepage.html
-        }, 3000); // Redirect after 3 seconds
-    });
-
-    document.getElementById('signupForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const name = document.getElementById('signupName').value;
-        const email = document.getElementById('signupEmail').value;
-        const password = document.getElementById('signupPassword').value;
-
-        // Normally, here you'd send the data to the server via an API or AJAX
-        // If signup is successful, redirect to homepage.html
-        successMessage.textContent = 'Sign up successful for ' + name;
-        successMessage.style.display = 'block';
-        setTimeout(function () {
-            successMessage.style.display = 'none';
-            window.location.href = "homepage.html";  // Redirect to homepage.html
-        }, 3000); // Redirect after 3 seconds
-    });
-</script>
-
+            // Redirect to the dashboard
+            window.location.href = 'dashboard.html';
+        });
+    </script>
 </body>
 </html>
+

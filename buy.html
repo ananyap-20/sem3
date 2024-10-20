@@ -1050,9 +1050,49 @@
     
     
     
-    <div class="wp-block-uagb-buttons uagb-buttons__outer-wrap uagb-btn__default-btn uagb-btn-tablet__default-btn uagb-btn-mobile__default-btn uagb-block-cde0891a"><div class="uagb-buttons__wrap uagb-buttons-layout-wrap ">
-    <div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-92fe8e5e wp-block-button"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater wp-block-button__link" aria-label="" href="#" rel="follow noopener" target="_self" role="button"><div class="uagb-button__link">calculator</div></a></div></div>
-    </div></div>
+    <div class="wp-block-uagb-buttons uagb-buttons__outer-wrap uagb-btn__default-btn uagb-btn-tablet__default-btn uagb-btn-mobile__default-btn uagb-block-cde0891a">
+        <div class="uagb-buttons__wrap uagb-buttons-layout-wrap ">
+            <div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-92fe8e5e wp-block-button">
+                <div class="uagb-button__wrapper">
+                    <!-- Link to calculator.html page -->
+                    <a class="uagb-buttons-repeater wp-block-button__link calculator-btn" 
+                       href="calculator.html" 
+                       rel="follow noopener" 
+                       target="_self" 
+                       role="button" 
+                       aria-label="Buy Calculator">
+                        <div class="uagb-button__link">Buy Calculator</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        /* Custom Button Styling */
+        .calculator-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            text-align: center;
+            background-color: #ef5959; /* Red button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        .calculator-btn:hover {
+            background-color: #cc4e4e; /* Darker red on hover */
+            transform: scale(1.05); /* Slight hover effect */
+        }
+    
+        .calculator-btn:focus {
+            outline: none;
+        }
+    </style>
+    
     
     
     

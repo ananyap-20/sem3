@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Store</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+
+        header {
+            background-color: #ef5959;
+            color: white;
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: white;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+            color: #000000;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ef5959;
+        }
+
+        .product-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            margin-bottom: 30px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #000000;
+            margin-bottom: 15px;
+            transition: opacity 0.3s ease;
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .card p {
+            color: #333333;
+            margin-bottom: 15px;
+        }
+
+        .card button {
+            background-color: #ef5959;
+            border: none;
+            padding: 12px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .card button:hover {
+            background-color: #cc4e4e;
+            transform: scale(1.05);
+        }
+
+        .card button:focus {
+            outline: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            .product-section {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                justify-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Calculator Store</h1>
+    <p>Your one-stop shop for all types of calculators</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Scientific</a>
+    <a href="#">Graphing</a>
+    <a href="#">Financial</a>
+    <a href="#">Contact Us</a>
+</nav>
+
+<section class="product-section">
+    <!-- Calculator 1 -->
+    <div class="card">
+        <img src="https://c8.alamy.com/comp/J4AFRH/boy-learning-mathematical-class-school-J4AFRH.jpg" alt="Scientific Calculator">
+        <h3>Scientific Calculator</h3>
+        <p>₹2,499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 2 -->
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.cA-2LIBD3hsEUbVDhlBQYgHaE8?rs=1&pid=ImgDetMain" alt="Graphing Calculator">
+        <h3>Graphing Calculator</h3>
+        <p>₹7,499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 3 -->
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.YnqqGXf56wLWnYg8EONROwHaHT?rs=1&pid=ImgDetMain" alt="Financial Calculator">
+        <h3>Financial Calculator</h3>
+        <p>₹4,999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 4 -->
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.vOAqLuFiOj84Y3zAOSaq3wHaHa?rs=1&pid=ImgDetMain" alt="Basic Calculator">
+        <h3>Basic Calculator</h3>
+        <p>₹799</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 5 -->
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.Dj7LWFw4dur7pAsdOcwI0AHaHa?rs=1&pid=ImgDetMain" alt="Advanced Scientific Calculator">
+        <h3>Advanced Scientific Calculator</h3>
+        <p>₹3,499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 6 -->
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.dguGz0_NiQtLXXrlbmmdegHaEL?rs=1&pid=ImgDetMain" alt="Solar-Powered Calculator">
+        <h3>Solar-Powered Calculator</h3>
+        <p>₹999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 7 -->
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.LULlr5-O3m54pC-h9MK7HQHaHa?rs=1&pid=ImgDetMain" alt="Pocket Calculator">
+        <h3>Pocket Calculator</h3>
+        <p>₹499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 8 -->
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.oswFmH-gT2cYy_B2wiq6pwHaE7?rs=1&pid=ImgDetMain" alt="Business Calculator">
+        <h3>Business Calculator</h3>
+        <p>₹3,999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 9 -->
+    <div class="card">
+        <img src="https://thumbs.dreamstime.com/b/calculator-office-desk-27584244.jpg" alt="Desktop Calculator">
+        <h3>Desktop Calculator</h3>
+        <p>₹1,199</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Calculator 10 -->
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.76ZCvRHv4V5ok7L1Cl51kwAAAA?rs=1&pid=ImgDetMain" alt="Programmable Calculator">
+        <h3>Programmable Calculator</h3>
+        <p>₹5,999</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+
+</body>
+</html>

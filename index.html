@@ -209,54 +209,57 @@
     <div class="success-message" id="successMessage">Your account has been successfully created. You can now log in!</div>
 
     <script>
-        // Get the form elements
-        const loginFormBox = document.getElementById('loginFormBox');
-        const signupFormBox = document.getElementById('signupFormBox');
-        const goToSignup = document.getElementById('goToSignup');
-        const goToLogin = document.getElementById('goToLogin');
-        const successMessage = document.getElementById('successMessage');
+    // Get the form elements
+    const loginFormBox = document.getElementById('loginFormBox');
+    const signupFormBox = document.getElementById('signupFormBox');
+    const goToSignup = document.getElementById('goToSignup');
+    const goToLogin = document.getElementById('goToLogin');
+    const successMessage = document.getElementById('successMessage');
 
-        // Switch to Sign Up form
-        goToSignup.addEventListener('click', function () {
-            loginFormBox.style.display = 'none';
-            signupFormBox.style.display = 'block';
-        });
+    // Switch to Sign Up form
+    goToSignup.addEventListener('click', function () {
+        loginFormBox.style.display = 'none';
+        signupFormBox.style.display = 'block';
+    });
 
-        // Switch to Login form
-        goToLogin.addEventListener('click', function () {
-            signupFormBox.style.display = 'none';
-            loginFormBox.style.display = 'block';
-        });
+    // Switch to Login form
+    goToLogin.addEventListener('click', function () {
+        signupFormBox.style.display = 'none';
+        loginFormBox.style.display = 'block';
+    });
 
-        // Dummy form submission handling (replace with actual logic)
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPassword').value;
+    // Dummy form submission handling (replace with actual logic)
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
 
-            // Normally, here you'd send the data to the server via an API or AJAX
-            // For now, we'll display a success message without alerting the user.
-            successMessage.textContent = 'Login successful for ' + email;
-            successMessage.style.display = 'block';
-            setTimeout(function () {
-                successMessage.style.display = 'none';
-            }, 3000); // Hide the message after 3 seconds
-        });
+        // Normally, here you'd send the data to the server via an API or AJAX
+        // If login is successful, redirect to homepage.html
+        successMessage.textContent = 'Login successful for ' + email;
+        successMessage.style.display = 'block';
+        setTimeout(function () {
+            successMessage.style.display = 'none';
+            window.location.href = "homepage.html";  // Redirect to homepage.html
+        }, 3000); // Redirect after 3 seconds
+    });
 
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('signupName').value;
-            const email = document.getElementById('signupEmail').value;
-            const password = document.getElementById('signupPassword').value;
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('signupName').value;
+        const email = document.getElementById('signupEmail').value;
+        const password = document.getElementById('signupPassword').value;
 
-            // Normally, here you'd send the data to the server via an API or AJAX
-            // For now, we'll display a success message without alerting the user.
-            successMessage.textContent = 'Sign up successful for ' + name;
-            successMessage.style.display = 'block';
-            setTimeout(function () {
-                successMessage.style.display = 'none';
-            }, 3000); // Hide the message after 3 seconds
-        });
-    </script>
+        // Normally, here you'd send the data to the server via an API or AJAX
+        // If signup is successful, redirect to homepage.html
+        successMessage.textContent = 'Sign up successful for ' + name;
+        successMessage.style.display = 'block';
+        setTimeout(function () {
+            successMessage.style.display = 'none';
+            window.location.href = "homepage.html";  // Redirect to homepage.html
+        }, 3000); // Redirect after 3 seconds
+    });
+</script>
+
 </body>
 </html>

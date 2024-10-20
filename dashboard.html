@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* Styles for the dashboard */
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6e7ff3, #ff7e5f);
+        }
+
+        .dashboard-box {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .greeting {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #6e7ff3;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1.1rem;
+            width: 180px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #5a67d8;
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(1);
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-box">
+        <h1>Welcome</h1>
+        <p class="greeting" id="greetingText">Hi, [User Name]!</p>
+
+        <button id="buyRentButton">Buy / Rent</button>
+        <button id="sellLendButton">Sell / Lend</button>
+    </div>
+
+    <script>
+        // Retrieve the user's name from localStorage
+        const userName = localStorage.getItem('userName');
+        
+        if (userName) {
+            // Display the user's name
+            document.getElementById('greetingText').innerText = 'Hi, ' + userName + '!';
+        } else {
+            // If userName doesn't exist, redirect back to login
+            window.location.href = 'login.html';
+        }
+
+        // Event listener for Buy/Rent button
+        document.getElementById('buyRentButton').addEventListener('click', function() {
+            // Redirect to Buy/Rent page
+            window.location.href = 'buy_rent.html';  // Replace with your actual Buy/Rent page
+        });
+
+        // Event listener for Sell/Lend button
+        document.getElementById('sellLendButton').addEventListener('click', function() {
+            // Redirect to Sell/Lend page
+            window.location.href = 'sell_lend.html';  // Replace with your actual Sell/Lend page
+        });
+    </script>
+</body>
+</html>
+
